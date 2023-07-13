@@ -4,13 +4,8 @@ import HasuraGraphiQL from "@hasura/public-graphiql";
 import {getPresets} from "./utils";
 
 function App() {
-  const {
-    defaultHeaders,
-    defaultQuery,
-    defaultUrl,
-    defaultVariables,
-    queryFile,
-  } = getPresets();
+  const {defaultHeaders, defaultQuery, defaultUrl, defaultVariables} =
+    getPresets();
   const [endpoint, setEndpoint] = useState(defaultUrl);
 
   if (endpoint.length) {
